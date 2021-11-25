@@ -10,7 +10,15 @@ namespace Client.Sensors
     {
         public string toJson()
         {
-            return "{\"positionX\": " + GetPositionX() + "}" + "{\"positionX\": " + GetPositionY() + "}";
+            int positionX;
+            int positionY;
+            
+           
+            positionX = GetPositionX();
+            positionY = GetPositionY();
+            
+            
+            return "{\"positionX\": " + positionX + "," + "\"position\": " + positionY + "}";
         }
 
         public int GetPositionX()
@@ -24,5 +32,6 @@ namespace Client.Sensors
             return randomY.Next(1000);
         }
 
+        
     }
 }

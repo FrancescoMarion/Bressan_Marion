@@ -14,6 +14,7 @@ namespace Client
             List<SensorInterface> sensors = new List<SensorInterface>();
             sensors.Add(new VirtualSpeedSensor());
             sensors.Add(new VirtualPositionSensor());
+            sensors.Add(new VirtualBatterySensor());
 
             // define protocol
             ProtocolInterface protocol = new Http("http://localhost:8011/drones/123");
